@@ -1,0 +1,62 @@
+#textAnimation {
+    width: 500px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid black;
+    width: 100%;
+}
+
+#textstatic,
+#textdynamic {
+    width: 300px;
+    height: 50px;
+    padding: 3px;
+    font-size: 40px;
+    font-weight: 800;
+    color: grey;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 800;
+}
+
+#textdynamic {
+    background-color: rgb(26, 139, 26);
+    animation: textAniBg 3s linear infinite;
+}
+
+#textAnimation>#textdynamic::before {
+    color: white;
+    content: "LIFESTYLE";
+    animation: textAni 3s linear infinite;
+}
+
+@keyframes textAni {
+    0% {
+        content: "LIFESTYLE";
+    }
+    50% {
+        content: "EVERYTHING";
+    }
+    100% {
+        content: "WORK";
+    }
+}
+
+@keyframes textAniBg {
+    0% {
+        background-color: rgb(26, 139, 26);
+    }
+    50% {
+        background-color: rgb(222, 10, 10);
+    }
+    100% {
+        background-color: rgb(10, 146, 220);
+    }
+}
